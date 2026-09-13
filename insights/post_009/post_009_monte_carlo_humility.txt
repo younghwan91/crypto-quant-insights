@@ -1,0 +1,81 @@
+Monte Carlo Said I'd Have $390K. It Also Said 21% Chance of Ruin.
+
+Both numbers came from the same 10,000-path simulation.
+
+Starting with $2,000, using bootstrap resampling from a live trade pool across 4.73 years of Binance data, the simulation ran 785 trades per path (one year, compounded).
+
+Final balance percentiles after 1 year:
+
+P10: $20,280 (+914%)
+P25: $83,181 (+4,059%)
+P50: $390,471 (+19,424%)
+P75: $1,828,848 (+91,342%)
+P90: $7,151,000 (+357,450%)
+
+The median outcome looks extraordinary. +19,424% in a year.
+
+The max drawdown percentiles, measured across the same paths:
+
+P5: 56.9%
+P25: 66.3%
+P50: 73.6%
+P75: 81.2%
+P95: 90.9%
+
+The median path to that $390K involved a 73.6% drawdown somewhere along the way.
+
+Probability of profit after 1 year: 99.1%. That number is real — the edge is statistically robust (EV +0.385% per trade, 785 trades/year). But probability of experiencing a drawdown below 50% of starting capital: 21.1%.
+
+One in five paths ends the year profitable but spent meaningful time below half the starting capital.
+
+The distribution is extremely right-skewed. Mean balance was $4.65M versus median $390K — driven by a small number of paths that compound explosively. The arithmetic mean is not a useful planning number.
+
+What this simulation mostly illustrates is that compounding a high-leverage strategy creates path-dependent outcomes with wide variance. The edge exists. The trajectory to capture it is genuinely volatile.
+
+Worth running this kind of simulation before sizing up: the upside percentiles are easy to remember. The drawdown percentiles are what you actually experience.
+
+10,000 simulation paths · $2,000 initial capital · 785 trades/year · 4.73yr Binance trade pool
+
+#AlgoTrading #QuantFinance #CryptoTrading #RiskManagement #Backtesting
+
+
+---
+
+
+몬테카를로가 $390K라고 했다. 파산 확률도 21%라고 했다.
+
+같은 시뮬레이션에서 나온 숫자들이다.
+
+$2,000 시작 자본, 4.73년치 바이낸스 실거래 풀에서 부트스트랩 리샘플링, 연간 785회 거래 복리 적용. 10,000개 경로.
+
+1년 후 최종 잔고:
+
+P10: $20,280 (+914%)
+P25: $83,181 (+4,059%)
+P50: $390,471 (+19,424%)
+P75: $1,828,848 (+91,342%)
+P90: $7,151,000 (+357,450%)
+
+중앙값이 +19,424%. 숫자만 보면 대단하다.
+
+같은 경로들의 최대 낙폭:
+
+P5: 56.9%
+P25: 66.3%
+P50: 73.6%
+P75: 81.2%
+P95: 90.9%
+
+$390K에 도달하는 중앙값 경로는 어딘가에서 73.6% 낙폭을 겪었다.
+
+1년 후 수익 확률: 99.1%. 진짜 수치다 — EV +0.385%/거래, 연 785회 거래의 통계적 엣지에서 나온 것이다. 그런데 자본의 50% 아래로 내려갈 확률: 21.1%.
+
+5개 중 1개 경로는 수익을 내며 끝나지만 도중에 자본이 절반 이하로 내려갔다.
+
+분포가 극도로 오른쪽으로 치우쳐 있다. 평균 잔고 $4.65M vs 중앙값 $390K — 소수의 경로가 폭발적으로 복리 성장한 결과다. 평균은 계획에 쓸 수 있는 수치가 아니다.
+
+이 시뮬레이션이 주로 보여주는 것: 고레버리지 전략을 복리로 운용하면 경로 의존적 결과가 생기고 분산이 매우 커진다. 엣지는 존재한다. 그 엣지를 취하는 여정이 실제로 험하다.
+
+규모를 키우기 전에 이런 시뮬레이션을 돌려보는 게 좋다. 상위 퍼센타일은 기억하기 쉽다. 실제로 경험하는 건 낙폭 퍼센타일이다.
+
+10,000개 시뮬레이션 경로 · 초기 자본 $2,000 · 연 785회 거래 · 바이낸스 4.73년 거래 풀

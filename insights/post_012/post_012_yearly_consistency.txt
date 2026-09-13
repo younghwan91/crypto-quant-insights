@@ -1,0 +1,41 @@
+Every Configuration Lost Money in At Least One Year. Except This One.
+
+132 variants. 6 years of data. Only one was positive every single year.
+
+We screened 132 parameter configurations across 6 years of Binance USDT-M perpetuals. The filter for "structural" candidates: PF > 1.0, trade count above 1,000, and no losing years. 68 of 132 passed on PF and trade count. On losing years: 1 configuration out of 132 passed all three — zero losing years across 2020, 2021, 2022, 2023, 2024, and 2025.
+
+That configuration's worst year was 2023: +50.1%. Its best year was 2020: +517.9%. Across the full 6-year period, max drawdown stayed below 32.4% in every year individually. Calmar ratio across the full period: 5.8.
+
+The mechanism worth understanding: the yearly constraint eliminates configurations that are simply well-calibrated to one or two strong years and underperform in the rest. 2022 and 2023 are the filters that matter most here — 2022 included Luna and FTX (sharp drawdowns testing risk controls), 2023 was a low-momentum environment that tested whether the edge survived without a bull market tailwind. Configurations that relied on trending conditions through 2021 typically failed 2023.
+
+The second-ranked configuration by our Calmar-weighted aggression score had one losing year. Its 6-year cumulative return was similar, but its worst year was -2.8% (2021). The presence of one losing year doesn't make it an invalid strategy — but it does change the drawdown sequencing risk.
+
+The critical point is methodological: if you rank configurations by full-period return alone, the ranking ignores how concentrated those returns were. A 6-year Calmar of 5.8 with zero losing years is a structurally different result from 5.8 Calmar that required one exceptional year to hold up.
+
+Caveat: 6 years of data includes the most exceptional bull market in crypto history (2020-2021). Zero-losing-year performance over this window doesn't guarantee similar consistency in future regimes. The OOS question remains open.
+
+60 USDT-M perpetuals · 6yr live Binance data · 132 configurations · Zero-losing-year criterion · 2020-2025
+
+#AlgoTrading #QuantFinance #Backtesting #CryptoTrading #RiskManagement
+
+
+---
+
+
+132개 구성 중 모든 해에 수익을 낸 건 딱 하나였다.
+
+132개 파라미터 구성, 6년 데이터, 매년 흑자인 구성은 단 1개.
+
+바이낸스 USDT-M 선물 6년치로 132개 구성을 스크리닝했다. 기준: PF > 1.0, 거래 수 1,000+, 손실 연도 없음. PF와 거래 수에서 68개가 통과했다. 손실 연도 없음 기준까지 통과한 건 132개 중 1개였다 — 2020, 2021, 2022, 2023, 2024, 2025 전부 흑자.
+
+그 구성의 최악의 해: 2023년, +50.1%. 최고의 해: 2020년, +517.9%. 6년 내내 연도별 최대 낙폭이 32.4% 이하를 유지했다. 전체 기간 칼마: 5.8.
+
+메커니즘: 연도별 필터가 "특정 해 운이 좋았던 구성"과 "구조적으로 작동하는 구성"을 구분해낸다. 가장 중요한 필터는 2022년과 2023년이었다. 2022년은 루나와 FTX가 있었고(리스크 관리 실력을 테스트하는 급락), 2023년은 저모멘텀 환경에서 강세장 없이 엣지가 살아남는지를 테스트했다. 2021년 추세에 기댄 구성들은 대부분 2023년에 걸렸다.
+
+칼마 가중 점수 기준 2위 구성은 손실 연도가 1개 있었다. 6년 누적 수익률은 비슷했지만, 최악의 해가 -2.8%(2021)였다. 손실 연도 하나가 전략을 무효로 만들지는 않는다 — 하지만 낙폭 순서 리스크가 달라진다.
+
+핵심은 방법론이다: 전체 기간 수익만으로 순위를 매기면, 그 수익이 얼마나 집중됐는지를 무시하게 된다. 손실 연도 없이 칼마 5.8과, 특별한 해 하나가 받쳐줘야 하는 칼마 5.8은 구조적으로 다른 결과다.
+
+주의: 6년 데이터는 크립토 역사상 가장 특별한 강세장(2020~2021)을 포함한다. 이 구간의 무손실 성과가 미래 레짐에서도 이어진다는 보장은 없다.
+
+바이낸스 USDT-M 선물 60종목 · 6년 실데이터 · 132개 구성 · 무손실 연도 기준 · 2020~2025

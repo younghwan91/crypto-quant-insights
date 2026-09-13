@@ -1,0 +1,57 @@
+More Leverage or More Positions?
+
+Both approaches can target similar annual returns. Only one tends to survive the year.
+
+We ran the same strategy at matched return targets using two paths: increasing leverage on a single position, or increasing the number of simultaneous positions while keeping leverage fixed.
+
+The numbers from 6 years of Binance USDT-M data:
+
+3 positions × 1x: +134.7% annual return, 74.8% max drawdown, Calmar 1.8
+1 position × 3x: +170.1% annual return, 97.2% max drawdown, Calmar 1.8
+
+5 positions × 1x: +143.1% annual return, 72.9% max drawdown, Calmar 2.0
+1 position × 5x: +168.8% annual return, 99.8% max drawdown, Calmar 1.7
+
+The leverage paths deliver slightly more raw return. The multi-position paths deliver nearly the same return with meaningfully lower drawdown — and better risk-adjusted returns (Calmar) in the 5-unit comparison.
+
+The mechanism is correlation. Measured across the 50-symbol universe, concurrent trade PnL correlation was 0.051 — nearly zero. Each additional position is largely an independent bet. The portfolio drawdown reflects that independence.
+
+Leverage doesn't get this benefit. When a leveraged position goes wrong, the full capital exposure moves against you at once. There's no averaging effect.
+
+There's also a compounding effect in the other direction: at 1 slot × 5x leverage, the maximum drawdown across the full 6-year window reached 99.8%. One bad sequence of trades in that path left essentially nothing to compound. The 5-slot path never reached that scenario.
+
+The crossover isn't surprising in theory — portfolio diversification is well understood. What's worth checking in practice is whether your specific signals actually are uncorrelated in live markets, especially during volatile periods when correlations tend to spike.
+
+In this data, they were. Concurrent trade PnL ρ = 0.051 across 10.8M bars. That's why the multi-position path held up.
+
+50 USDT-M perpetuals · 6yr live Binance data · 8 configurations · leverage 1–5× vs slots 1–5
+
+#AlgoTrading #QuantFinance #CryptoTrading #RiskManagement #SystematicTrading
+
+
+---
+
+
+레버리지를 높일까, 포지션 수를 늘릴까?
+
+비슷한 연간 수익률을 목표로 하는 두 가지 방법이 있다. 둘 다 숫자가 비슷해 보이는데 결과는 다르다.
+
+6년치 바이낸스 USDT-M 데이터로 두 접근법을 직접 비교했다.
+
+3슬롯 × 레버리지 1배: 연 수익률 +134.7%, 최대 낙폭 74.8%, Calmar 1.8
+1슬롯 × 레버리지 3배: 연 수익률 +170.1%, 최대 낙폭 97.2%, Calmar 1.8
+
+5슬롯 × 레버리지 1배: 연 수익률 +143.1%, 최대 낙폭 72.9%, Calmar 2.0
+1슬롯 × 레버리지 5배: 연 수익률 +168.8%, 최대 낙폭 99.8%, Calmar 1.7
+
+레버리지 경로가 절대 수익률은 약간 더 높다. 하지만 멀티 슬롯 경로가 비슷한 수익을 내면서 낙폭은 훨씬 낮았다. Calmar 기준으로도 5슬롯이 앞섰다.
+
+이유는 상관관계에 있다. 50종목 유니버스에서 동시 진행 거래 간 PnL 상관계수는 0.051 — 거의 무상관이었다. 슬롯 하나가 터져도 나머지가 버텨준다.
+
+레버리지는 이 혜택이 없다. 포지션 하나가 잘못되면 전체 자본이 한꺼번에 맞는다.
+
+1슬롯 × 5배 레버리지 경로는 6년 중 최대 낙폭이 99.8%에 달했다. 한 번의 연속 손실 구간이 복리 기반을 거의 초기화한다. 5슬롯 경로는 그런 구간이 없었다.
+
+물론 이게 통하려면 신호들이 실제로 독립적이어야 한다. 시장이 무너질 때는 상관관계가 급등하는 경우가 많으니까. 이 데이터에서는 10.8M 바 기준 ρ=0.051이었다. 그래서 멀티 슬롯이 버텼다.
+
+바이낸스 USDT-M 선물 50종목 · 6년 실데이터 · 레버리지 1~5배 vs 슬롯 1~5개 비교

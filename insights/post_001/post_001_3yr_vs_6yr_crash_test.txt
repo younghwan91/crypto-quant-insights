@@ -1,0 +1,45 @@
+The #1 Config on 3 Years Became #7 on 6 Years
+
+Same strategy. Same data source. Different window length.
+
+We ran 19 parameter configurations across 6 years of Binance USDT-M perpetuals, including four major crash events: COVID (Mar 2020), the China mining ban (May 2021), Luna (May 2022), and FTX (Nov 2022).
+
+The configuration that ranked best on the 3-year window had a 6.7% max drawdown and profit factor of 2.31. Extend the window to 6 years — same config, same logic — and that drawdown reaches 13.2%. Same rank: #7 out of 19.
+
+The mechanism isn't mysterious. During the four crash periods, cross-asset crypto correlation spiked from a baseline of roughly 0.12 to 0.61. A 4-position portfolio that behaves as approximately 4 independent bets in normal conditions effectively becomes 1.6 uncorrelated positions during drawdowns. The portfolio drawdown amplifies accordingly — it's a mathematical consequence of correlation structure, not signal failure.
+
+The configuration that held up best across all four crash periods ran 2 simultaneous positions instead of 4. Its drawdown grew by only 0.6 percentage points across the same events. It gave up return in calm markets to keep correlated exposure low when it mattered.
+
+Across all 19 variants, profit factor fell when extending from 3 to 6 years — from 2.0–2.3 down to 1.26–1.35. The more useful question turned out to be which configs degraded least.
+
+One practical check worth running: decompose your total return by year. If 2020-2022 accounts for more than 60% of cumulative return, the edge may be regime-dependent rather than structural.
+
+Note: this covers USDT-M perpetuals during a window that includes significant bull market periods. The crash-period correlation numbers reflect crypto-specific behavior and may not generalize to other asset classes.
+
+50 USDT-M perpetuals · 6yr live Binance data · 19 variants · COVID / China ban / Luna / FTX included
+
+#AlgoTrading #QuantFinance #CryptoTrading #Backtesting #RiskManagement
+
+
+---
+
+
+3년 1등이 6년에서 7등으로 떨어졌다
+
+같은 전략, 같은 데이터, 기간만 달랐다.
+
+19개 파라미터 구성을 바이낸스 USDT-M 선물 6년치로 테스트했다. COVID(2020.3), 중국 채굴 금지(2021.5), 루나(2022.5), FTX(2022.11) — 네 번의 대형 크래시가 전부 포함된 기간이다.
+
+3년 기준 1위 구성의 성적표: 최대 낙폭 6.7%, PF 2.31. 6년으로 늘리자 — 코드 한 줄 안 바꾸고 — 낙폭이 13.2%로 올라갔다. 순위는 19개 중 7위.
+
+이유는 단순하다. 4번의 크래시 동안 크립토 자산 간 상관계수가 평상시 0.12에서 0.61로 뛰었다. 평소에 4개의 독립된 베팅처럼 움직이던 포트폴리오가, 정작 낙폭이 날 때는 1.6개짜리가 된다. 낙폭이 커지는 건 신호 실패가 아니라 상관 구조의 수학적 결과다.
+
+4번의 크래시에서 가장 잘 버틴 건 동시 포지션을 2개로 제한한 구성이었다. 낙폭 증가폭이 0.6%p에 불과했다. 조용한 장에서 수익을 일부 포기하는 대신, 중요한 순간에 상관 노출을 낮게 유지한 것이다.
+
+전체 19개 변형에서 6년으로 확장하면 PF가 2.0~2.3 → 1.26~1.35로 내려갔다. 더 실용적인 질문은 "어느 구성이 가장 덜 무너졌는가"다.
+
+실용 체크: 연도별 수익을 쪼개보자. 2020~2022년이 전체의 60% 이상이라면, 그 엣지는 구조적이 아닐 수 있다.
+
+참고: 2020~2026 데이터는 역대급 강세장을 포함한다. 크래시 구간의 상관계수 급등은 크립토 특화 현상으로, 다른 자산군에 그대로 적용하기 어렵다.
+
+바이낸스 USDT-M 선물 50종목 · 6년 실데이터 · 19개 변형 · COVID/중국 채굴 금지/루나/FTX 포함

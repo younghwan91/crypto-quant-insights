@@ -1,0 +1,41 @@
+Long EV Fell 64% in Six Years. The Gap to Short EV Almost Inverted.
+
+In 2020-2021, the long side had more than 2× the expected value per trade of the short side on the same symbols. By 2025, the gap had compressed to near zero.
+
+The raw numbers: long EV started at 6.5% per trade equivalent. Short EV sat at 2.9%. By 2024-2025, long EV had fallen to 2.3%. Short EV had fallen to 1.5%. The structural advantage that was once "go long by default" is gone.
+
+This shift was gradual, not sudden. The inflection point sits around mid-2022 — the period following the Luna collapse and a sustained bear market that lasted into 2023. Two things happened simultaneously. First, prolonged downtrends meant that aggressive long continuation signals hit stop-losses more often. Second, as crypto matured, more sophisticated participants entered — mean-reversion in overbought conditions became more reliable, which compresses directional long edge.
+
+A calibration warning: if your strategy was built on parameters tuned during 2020-2021, your long EV assumption may be approximately 2× what the current market delivers. That gap doesn't show up as an obvious failure — the strategy still makes money, just at half the rate you modeled.
+
+The short side showed its own asymmetry. Short EV improved during the 2022-2023 bear market, then fell once sustained downtrends became scarce again. Neither direction has stable edge independent of regime.
+
+One practical cross-check: run your strategy separately on 2020-2022 and 2023-2025 data. If the long-to-short edge ratio looks different between periods, your directional assumptions may need to be period-qualified.
+
+Note: this analysis covers crypto-specific behavior during a period that included extraordinary bull and bear cycles. The magnitude of directional asymmetry shifts is likely higher than what you'd observe in traditional assets.
+
+60 USDT-M perpetuals · 6yr live Binance data · Long/short EV measured per intraday bar · 2020-2025
+
+#AlgoTrading #QuantFinance #CryptoTrading #Backtesting #RiskManagement
+
+
+---
+
+
+6년 동안 롱 EV가 64% 줄었다. 숏과의 격차는 거의 사라졌다.
+
+2020~2021년, 같은 종목에서 롱의 거래당 기댓값은 숏의 2배가 넘었다. 2025년엔 둘이 거의 같아졌다.
+
+숫자로 보면: 롱 EV는 6.5%에서 시작해 2024~2025년엔 2.3%까지 떨어졌다. 숏 EV는 2.9% → 1.5%. "기본값은 롱"이라는 구조적 우위가 사라진 것이다.
+
+변화는 갑자기 온 게 아니다. 변곡점은 2022년 중반이다 — 루나 붕괴 이후 2023년까지 이어진 하락장 시기. 두 가지가 동시에 일어났다. 장기 하락으로 공격적인 롱 신호들이 손절에 더 자주 걸렸고, 크립토 시장이 성숙해지면서 정교한 참여자들이 늘어 과매수 구간의 평균회귀가 더 신뢰할 수 있어졌다. 방향성 롱 엣지가 자연스럽게 압축됐다.
+
+중요한 경고: 2020~2021년에 튜닝된 파라미터를 쓰고 있다면, 롱 EV 가정이 현재 시장의 2배 수준일 수 있다. 이게 눈에 띄는 실패로 나타나지 않는다는 게 문제다 — 전략은 여전히 돈을 벌지만, 예상의 절반 속도로.
+
+숏도 마찬가지다. 2022~2023년 하락장에서 숏 EV가 개선됐다가, 하락 추세가 줄어들자 다시 내려갔다. 어느 방향도 시장 레짐과 독립적인 안정 엣지를 갖고 있지 않다.
+
+실용 교차 검증: 2020~2022년과 2023~2025년을 분리해서 돌려보자. 두 기간의 롱 대 숏 엣지 비율이 다르게 나온다면, 방향성 가정이 기간에 묶여 있을 수 있다.
+
+참고: 이 데이터는 크립토 역사상 특이한 강세·약세 사이클을 포함한다. 방향성 비대칭 변화의 규모는 전통 자산보다 클 가능성이 높다.
+
+바이낸스 USDT-M 선물 60종목 · 6년 실데이터 · 인트라데이 봉 기준 롱/숏 EV 측정 · 2020~2025

@@ -1,0 +1,57 @@
+I Tried Dynamic Parameters. Static Won.
+
+The idea made intuitive sense: classify the market into low, mid, and high volatility regimes based on BTC realized volatility percentile, then use different entry thresholds and stop sizes in each regime. Markets are clearly different across regimes — why use the same parameters for all of them?
+
+We ran 224 variants across a 6-year period, sweeping entry thresholds and stop sizes independently for each of the three volatility regimes. The data covered 50 symbols, 210,000+ bars, with regime classification applied in real time based on a 250-bar rolling percentile.
+
+The result was mixed in a specific way. Adaptive parameters improved EV per trade in 4 of 7 years — including 2024 (+18.1bp) and 2025 (+10.0bp), the years where static params had underperformed. But they degraded 2022 (−6.2bp) and produced a large miss in early 2026 (−24.5bp).
+
+In portfolio terms:
+
+EV per trade: +3.6bp improvement
+Profit factor: 1.280 → 1.311
+Annual return: 187.2% → 134.0% (−53pp)
+Max drawdown: 32.4% → 42.6%
+Calmar ratio: 5.8 → 3.1
+
+Better trades, fewer of them, with higher drawdown. The adaptive system found higher-quality setups in some conditions but removed 637 trades (28% of the total) in the process. At 10 portfolio slots, that reduction in trade frequency more than offset the per-trade improvement.
+
+The underlying reason seems to be that the signal itself already performs a form of regime filtering — in low-volatility conditions, fewer setups qualify naturally. Adding an explicit regime gate on top of that didn't improve selectivity meaningfully; it mostly reduced participation.
+
+The complexity cost is also real: 3 regimes × 6 parameters = 18 variables to monitor, with regime thresholds that are themselves a free parameter.
+
+Static params held a Calmar of 5.8 across all six years without a losing year. That kind of consistency is harder to improve than it looks.
+
+224 variants (Low/Mid/High vol sweep) · 6yr live Binance data · 50 USDT-M perpetuals
+
+#AlgoTrading #QuantFinance #CryptoTrading #Backtesting #MarketStructure
+
+
+---
+
+
+동적 파라미터를 써봤다. 정적이 이겼다.
+
+아이디어는 직관적으로 맞아 보였다. BTC 실현 변동성 백분위수로 시장을 저변동·중변동·고변동 레짐으로 분류하고, 각 레짐마다 다른 진입 임계값과 스탑 크기를 쓴다. 레짐이 분명히 다른데 왜 같은 파라미터를 쓰는가?
+
+6년 동안 224개 변형을 돌렸다. 세 변동성 레짐 각각에 대해 진입 임계값과 스탑 크기를 독립적으로 스윕했다. 50종목, 21만+ 바, 250바 롤링 백분위수로 실시간 레짐 분류 적용.
+
+결과는 특정한 방식으로 엇갈렸다. 적응형 파라미터가 7년 중 4개 연도에서 거래당 EV를 개선했다 — 2024년(+18.1bp)과 2025년(+10.0bp) 포함, 정적 파라미터가 저조했던 해들. 하지만 2022년에는 악화(-6.2bp)됐고, 2026년 초에는 큰 폭의 손실(-24.5bp)이 발생했다.
+
+포트폴리오 수치로 보면:
+
+거래당 EV: +3.6bp 개선
+수익 팩터: 1.280 → 1.311
+연 수익률: 187.2% → 134.0% (-53pp)
+최대 낙폭: 32.4% → 42.6%
+Calmar 비율: 5.8 → 3.1
+
+더 좋은 거래, 더 적은 수, 그리고 더 높은 낙폭. 적응형 시스템이 일부 조건에서 더 질 좋은 셋업을 찾았지만, 그 과정에서 637개 거래(전체의 28%)를 제거했다. 10슬롯 포트폴리오에서 그 거래 빈도 감소가 거래당 개선을 상쇄하고도 남았다.
+
+근본 원인으로 보이는 것은 신호 자체가 이미 일종의 레짐 필터링을 하고 있다는 점이다 — 저변동 구간에서는 자연스럽게 적격 셋업이 줄어든다. 그 위에 명시적 레짐 게이트를 추가해도 선택성이 의미 있게 개선되지 않고, 주로 참여를 줄이는 결과가 됐다.
+
+복잡성 비용도 실재한다: 레짐 3개 × 파라미터 6개 = 18개 변수를 모니터링해야 하고, 레짐 임계값 자체도 또 다른 자유 파라미터다.
+
+정적 파라미터는 손실 연도 없이 6년 전체 Calmar 5.8을 유지했다. 그런 일관성을 개선하기가 보기보다 어렵다.
+
+224개 변형(저/중/고 변동성 스윕) · 6년 실데이터 · 바이낸스 USDT-M 선물 50종목

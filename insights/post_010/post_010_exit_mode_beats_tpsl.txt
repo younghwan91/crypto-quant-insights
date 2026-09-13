@@ -1,0 +1,53 @@
+The Exit You Never Optimize (But Should)
+
+We ran 101 exit combinations across 6 years of Binance data. The TP/SL level barely moved the profit factor. The exit structure moved it a lot.
+
+The test swept 5 take-profit levels × 5 stop-loss levels across 4 exit modes. That's 100 combinations plus a production baseline.
+
+Profit factor across all 101 variants: 1.23–1.35. Remarkably stable. The underlying edge didn't care much whether the TP was narrow or wide — the same alpha held across the full grid.
+
+What changed dramatically was R:R — the ratio of average win to average loss.
+
+Standard exit mode (fixed TP/SL): R:R ≥ 1.0 in 10 out of 25 TP/SL combinations. Only achievable when TP target was wider than the stop.
+
+Partial exit with trail (TP1 + trailing runner): R:R ≥ 1.0 in 25 out of 25 combinations. Every single cell.
+
+The partial structure locks in a portion of profit at TP1, moves the stop to breakeven, then lets the remainder trail. This changes the loss side fundamentally: positions that hit TP1 can no longer become full losses. The R:R improvement comes from cutting the left tail, not from extending the right tail.
+
+This also means TP/SL tuning within the partial mode is low-impact. In standard mode, the exact TP level matters — it determines whether you're above or below the R:R = 1.0 line. In partial mode, you're above that line everywhere.
+
+The structural finding: the choice of exit mode had more influence on R:R outcomes than any specific TP or SL value. Optimizing TP/SL levels while keeping a standard exit structure is working on the smaller variable.
+
+One more thing worth noting: extending max hold time had zero effect. None of the positions were hitting the time limit — they were all exiting naturally through the trail. Adding more time to a mechanism that's already not being used changes nothing.
+
+50 USDT-M perpetuals · 6yr live Binance data · 101 exit combinations · 5 TP × 5 SL × 4 exit modes
+
+#AlgoTrading #QuantFinance #CryptoTrading #Backtesting #SystematicTrading
+
+
+---
+
+
+최적화 안 하고 있는 청산 방식
+
+바이낸스 데이터 6년으로 청산 조합 101개를 돌렸다. TP/SL 수준은 수익 팩터를 거의 안 움직였다. 청산 구조가 훨씬 많이 움직였다.
+
+TP 5단계 × SL 5단계 × 청산 방식 4가지를 스윕했다. 25개 TP/SL 격자 × 4가지 구조 = 100개 + 기준선 1개.
+
+101개 변형 전체의 수익 팩터: 1.23~1.35. 놀랍도록 안정적이었다. TP가 좁든 넓든 같은 엣지가 유지됐다.
+
+크게 달라진 건 R:R — 평균 수익 대비 평균 손실 비율이었다.
+
+표준 청산(고정 TP/SL): 25개 격자 중 10개에서만 R:R ≥ 1.0 달성. TP가 SL보다 넓을 때만 가능했다.
+
+부분 청산 + 트레일(TP1에서 일부 청산, 나머지 트레일): 25개 격자 전부에서 R:R ≥ 1.0 달성.
+
+왜 이렇게 되냐면 — TP1에서 일부를 확정하고 스탑을 손익분기점으로 옮기면, 그 이후 손실이 구조적으로 줄어든다. R:R 개선이 수익 오른쪽 꼬리를 늘려서가 아니라, 손실 왼쪽 꼬리를 잘라내서 발생한다.
+
+이렇게 되면 TP/SL 세밀 조정의 의미가 줄어든다. 표준 청산에서는 TP 수준이 중요하다 — R:R=1.0 선 위냐 아래냐가 거기서 결정되니까. 부분 청산 구조에서는 어차피 25개 격자 전부 그 선 위에 있다.
+
+핵심 발견: 청산 방식 선택이 TP/SL 값 선택보다 R:R에 훨씬 큰 영향을 줬다. 청산 구조를 표준으로 두고 TP/SL을 최적화하는 건 덜 중요한 변수를 만지는 것이다.
+
+그리고 최대 보유 시간 연장은 효과가 없었다. 기간 제한에 걸리는 포지션이 애초에 없었다 — 모두 트레일로 자연스럽게 청산됐기 때문이다.
+
+바이낸스 USDT-M 선물 50종목 · 6년 실데이터 · 청산 조합 101개 · TP 5단계 × SL 5단계 × 청산 방식 4가지

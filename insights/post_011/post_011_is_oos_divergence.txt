@@ -1,0 +1,50 @@
+Your In-Sample PF Was 2.16. Your Out-of-Sample PF Was 1.38.
+
+That 36% drop is the number that matters for live trading. The 2.16 is the number that gets put in pitch decks.
+
+We ran a strict IS/OOS validation across 7 parameter variants on 60 USDT-M perpetuals. The split: 2020-2022 as in-sample (2.9 years), 2023-2025 as out-of-sample (3.1 years). All variants were optimized on IS data only, then evaluated on OOS without modification.
+
+IS profit factors across variants: 2.16 to 3.51.
+OOS profit factors: 1.38 to 1.58.
+
+Every single variant failed the OOS/IS ratio threshold of 0.85. The range was 0.45 to 0.64. In plain terms: OOS performance was 36% to 55% below IS, regardless of which configuration we tested.
+
+The mechanism is specific to this dataset. The 2020-2022 window included the COVID crash recovery, a sustained bull market, the China mining ban, Luna, and FTX — a full boom-and-bust cycle that generated exceptional directional edge for momentum-based signals. The 2023-2025 window is a market normalization period: sustained trends are shorter, mean-reversion competes with momentum, and the structural tailwinds from 2021 are absent.
+
+A model calibrated on 2020-2022 is partially calibrated on extraordinary conditions. Its IS PF contains that windfall. The OOS PF doesn't.
+
+The practical implication is not that OOS PF 1.38 is bad — it isn't. A consistent 1.38 over 3.1 years of real data, including period 2023-2025, is a meaningful result. The implication is that presenting the IS number as the expected live number requires a disclosure: it spans the most favorable directional period in crypto history.
+
+One structural check worth adding: if your IS period includes 2021, decompose how much of your total IS return came from that single year. If it exceeds 40%, your IS is partially a 2021 proxy.
+
+Data covers 2020-2025, including significant bull and bear cycles. IS/OOS split is by calendar year, not random sampling — the split preserves temporal ordering.
+
+60 USDT-M perpetuals · 6yr live Binance data · 7 variants · IS: 2020-2022 / OOS: 2023-2025 · strict temporal split
+
+#AlgoTrading #QuantFinance #Backtesting #CryptoTrading #RiskManagement
+
+
+---
+
+
+학습 구간(IS) PF가 2.16이었다. 실제 구간(OOS) PF는 1.38이었다.
+
+그 36% 차이가 실거래에서 진짜 숫자다. 2.16은 발표 자료에 올라가는 숫자고.
+
+60개 USDT-M 선물로 7개 파라미터 변형을 엄격하게 IS/OOS 검증했다. 분할: 2020~2022(IS, 2.9년), 2023~2025(OOS, 3.1년). 모든 변형은 IS 데이터에서만 최적화됐고, 수정 없이 OOS에서 평가됐다.
+
+IS PF: 2.16~3.51. OOS PF: 1.38~1.58.
+
+OOS/IS 비율 기준 0.85를 통과한 변형은 단 하나도 없었다. 범위는 0.45~0.64. 어떤 구성을 테스트하든, OOS 성과는 IS보다 36~55% 낮았다.
+
+이유는 이 데이터셋에 특정된다. 2020~2022는 COVID 회복, 강세장, 중국 채굴 금지, 루나, FTX를 전부 포함한 완전한 붐-버스트 사이클이었다. 모멘텀 기반 신호에 탁월한 방향성 엣지가 있던 시기. 2023~2025는 시장 정상화 구간이다. 추세는 짧아지고, 모멘텀과 평균회귀가 경쟁하며, 2021년의 구조적 순풍은 없다.
+
+2020~2022에 최적화된 모델은 부분적으로 특별한 시기에 맞춰진 것이다. IS PF에는 그 기간의 이익이 포함돼 있다. OOS PF에는 없다.
+
+IS PF를 라이브 기대치로 쓸 때 필요한 주석이 있다: 이 숫자는 크립토 역사상 가장 방향성이 유리했던 기간을 포함한다.
+
+한 가지 구조적 체크: IS 기간에 2021년이 있다면, 전체 IS 수익 중 그 한 해에서 나온 비율을 계산해보자. 40%가 넘는다면 IS 수치는 부분적으로 2021년 대리 지표다.
+
+참고: 데이터는 2020~2025이며 강세장과 약세장을 모두 포함한다. IS/OOS 분할은 랜덤이 아닌 시간 순서를 보존한 달력 기준이다.
+
+바이낸스 USDT-M 선물 60종목 · 6년 실데이터 · 7개 변형 · IS: 2020~2022 / OOS: 2023~2025

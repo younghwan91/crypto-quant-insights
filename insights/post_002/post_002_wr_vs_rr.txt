@@ -1,0 +1,51 @@
+68.5% Win Rate. 6pp Safety Margin. One Bad Month Erases It.
+
+Win rate gets most of the attention. The number that matters more is the gap between your win rate and your breakeven win rate.
+
+Breakeven WR = 1 / (1 + R:R). At R:R = 0.6, that's 62.5%. A strategy with 68.5% win rate and R:R 0.6 has a 6 percentage point buffer before the edge disappears.
+
+Win rate is regime-sensitive. In trending conditions, a momentum-based approach might win 68% of the time. In choppy or mean-reverting markets, that same logic may win 58%. A 6pp safety margin doesn't survive that shift.
+
+We compared 5 exit configurations across 6 years of Binance data, testing through distinct bull, sideways, and bear market periods.
+
+The baseline: 68.5% WR, R:R 0.6, breakeven at 62.5% — 6pp buffer.
+Configurations 2-5: 57–67% WR, R:R 1.2–1.7, breakeven at 38–45% — buffers of 19–22pp.
+
+Across all three market regimes, the lower-WR configurations showed more stable profit factors. The high-WR baseline performed well in trending conditions. In choppy regimes, its buffer compressed exactly as predicted: win rate fell, and the strategy was operating near its breakeven threshold.
+
+The structural reason: win rate shifts with market conditions because it's determined by how often price moves in the direction of the signal. R:R doesn't shift the same way because it's determined by the exit logic — how you define a win and a loss. One is a market variable. The other is an engineering decision.
+
+Two configurations held statistically positive edge (bootstrap PF > 1.0 in 97%+ of resampled paths) in all three regime periods. The high-WR baseline held in two out of three.
+
+This measurement covers 6 years of USDT-M perpetuals including the 2020-2022 bull run. Win rate numbers from that window likely overstate what's available in calmer regimes.
+
+50 USDT-M perpetuals · 6yr live Binance data · 5 exit configurations · Bull / Chop / Bear regime classification
+
+#AlgoTrading #QuantFinance #CryptoTrading #RiskManagement #Backtesting
+
+
+---
+
+
+승률 68.5%, 6%p 안전 마진. 시장이 나빠지면 한 달 만에 사라진다.
+
+승률보다 중요한 건 손익분기 승률까지의 거리다.
+
+손익분기 승률 = 1/(1+R:R). R:R이 0.6이면 62.5%다. 승률 68.5%짜리 전략은 엣지가 사라지기 전까지 6%p의 여유가 있다.
+
+승률은 시장 상황에 따라 달라진다. 추세장에서 68%를 이기는 모멘텀 전략이, 횡보장에서는 58%로 떨어질 수 있다. 6%p 버퍼는 그 정도 변화에 버티지 못한다.
+
+바이낸스 데이터 6년치로 5가지 청산 방식을 상승장, 횡보장, 하락장에서 비교했다.
+
+기준선: WR 68.5%, R:R 0.6, 손익분기 62.5% → 버퍼 6%p.
+나머지 4개: WR 57~67%, R:R 1.2~1.7, 손익분기 38~45% → 버퍼 19~22%p.
+
+세 구간 모두에서 낮은 WR 구성이 더 안정적인 PF를 보였다. 기준선은 추세장에서 잘 돌아갔지만, 횡보 구간에서 WR이 떨어지며 손익분기점 근처에서 아슬아슬하게 운영됐다.
+
+구조적 이유: WR은 가격이 신호 방향으로 움직이는 빈도로 결정된다. 시장이 바뀌면 따라 바뀐다. R:R은 청산 로직이 결정한다 — 어떻게 익절하고 손절하는지. 하나는 시장 변수, 다른 하나는 설계 변수다.
+
+세 레짐 전부에서 부트스트랩 97%+ 경로가 PF > 1.0인 구성은 2개였다. 기준선은 3개 중 2개에서만 통과했다.
+
+참고: 데이터에 2020~2022년 강세장이 포함된다. 이 기간의 WR 수치는 조용한 시장보다 높게 나올 수 있다.
+
+바이낸스 USDT-M 선물 50종목 · 6년 실데이터 · 5가지 청산 방식 · 상승장/횡보장/하락장 구간별 분류

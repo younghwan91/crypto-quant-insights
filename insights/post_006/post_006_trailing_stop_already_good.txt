@@ -1,0 +1,41 @@
+Your Trailing Stop Is Probably Already Good Enough
+
+There's a tempting assumption that trailing stop logic is something you can meaningfully improve through complex mechanics — dynamic tightening, step-up phases, volume-weighted floors. We spent a research cycle testing 24 variants to see if that was true.
+
+The baseline used a simple volatility-based stop that kicked in after a partial take-profit. We then tested: step-up triggers, multi-phase tightening, time-based linear relaxation, volume-weighted floors, gain-adaptive widths, extended max holds, POC-based floors, and combinations.
+
+Out of 24 variants, the best improvement was +1.8% Calmar (baseline 1004 → 1022). Most variants landed within 1% of the baseline. Several — step-up triggers, max hold extensions, VWMA floors — had exactly zero effect.
+
+The reason the step-up and hold-extension variants did nothing is instructive: after hitting the first profit target, the average position exited in 6.9 bars under baseline conditions. It never reached the step-up trigger levels. Extending max hold had no effect because exactly zero positions were hitting the time limit anyway — they were exiting naturally through the trail.
+
+This points to a mathematical ceiling for trailing-only improvements. Positions that hit the runner phase (post-TP1) represent 14.7% of total trades, and their win rate is already 99.9%. Making those exits 10% more profitable shifts overall R:R by roughly 0.01. The loss side of the equation — 70.6% of trades — is determined by the entry stop logic, not the trailing mechanism.
+
+The one variant that actually helped was a tighter trail distance (0.7× the baseline width). Counterintuitively, exiting runners faster (4.6 bars vs 6.9) freed slots for new entries, generating 190 additional trades and +1.6% total return. The mechanism was slot turnover, not better per-runner exits.
+
+If you're spending optimization time on trailing stop complexity, it may be worth checking how much of your trade population actually reaches the runner phase — and what's determining exits on the majority that don't.
+
+24 trailing stop variants · 6yr live Binance data · 50 USDT-M perpetuals · 16,584 base trades
+
+#AlgoTrading #QuantFinance #CryptoTrading #Backtesting #SystematicTrading
+
+
+---
+
+
+트레일링 스탑은 이미 충분히 좋다
+
+트레일링 스탑 로직은 복잡한 메커니즘으로 의미 있게 개선할 수 있다는 유혹이 있다 — 동적 조임, 단계별 트리거, 거래량 가중 바닥선. 실제로 그런지 24개 변형을 테스트하는 리서치 사이클을 진행했다.
+
+기준선은 1차 목표 달성 후 활성화되는 단순 변동성 기반 스탑이었다. 그 다음 테스트한 것들: 단계별 트리거, 멀티페이즈 조임, 시간 기반 선형 완화, 거래량 가중 바닥선, 수익 연동 폭 조정, 최대 보유 연장, POC 기반 바닥선, 그리고 이것들의 조합.
+
+24개 변형 중 최대 개선은 Calmar +1.8%(기준 1004 → 1022)였다. 대부분은 기준선 ±1% 안에 들어왔다. 여러 변형 — 단계별 트리거, 최대 보유 연장, VWMA 바닥선 — 은 정확히 0 효과였다.
+
+단계별 트리거와 보유 연장이 효과가 없었던 이유가 시사적이다: 1차 목표 달성 후 평균 포지션은 기준선 조건에서 6.9바 만에 청산됐다. 단계별 트리거 수준에 도달하지 않았다. 최대 보유 연장이 효과 없었던 건, 시간 제한에 걸리는 포지션이 애초에 0개였기 때문 — 모두 트레일로 자연스럽게 빠져나갔다.
+
+이건 트레일링 전용 개선의 수학적 상한을 가리킨다. 러너 단계(TP1 이후)에 도달하는 포지션은 전체 거래의 14.7%이고, 이들의 승률은 이미 99.9%다. 이 청산을 10% 개선하면 전체 R:R이 약 0.01 움직인다. 방정식의 손실 쪽 — 거래의 70.6% — 은 트레일링 메커니즘이 아닌 진입 스탑 로직이 결정한다.
+
+실제로 효과가 있었던 변형은 트레일 거리를 좁힌 것(기준의 0.7배)이었다. 역설적으로, 러너를 더 빨리 청산하는 것(4.6바 vs 6.9바)이 슬롯 회전을 높여 190회의 추가 거래와 총 수익 +1.6%를 만들었다. 메커니즘은 러너 청산 품질 향상이 아니라 슬롯 턴오버였다.
+
+트레일링 스탑 복잡화에 최적화 시간을 쓰고 있다면, 한 번 확인해볼 만하다: 실제 거래 중 러너 단계에 도달하는 비율이 얼마인지, 그리고 그 비율이 아닌 대다수 거래의 청산을 뭐가 결정하고 있는지.
+
+24개 트레일링 스탑 변형 · 6년 실데이터 · 바이낸스 USDT-M 선물 50종목 · 기준 거래 16,584건
