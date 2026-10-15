@@ -9,22 +9,22 @@ The strategy itself (signal generation, live parameters, P&L) stays private — 
 
 ## Posts
 
-| # | Title |
-|---|---|
-| 001 | [Why Your 3-Year Crypto Backtest is Lying to You](insights/post_001/post_001_3yr_vs_6yr_crash_test.md) |
-| 002 | [Win Rate 70% vs R:R 2:1 — Which Actually Survives?](insights/post_002/post_002_wr_vs_rr.md) |
-| 003 | [The Long Bias That Stopped Working](insights/post_003/post_003_long_short_reversal.md) |
-| 004 | [More Symbols, More Alpha?](insights/post_004/post_004_universe_expansion.md) |
-| 005 | [The Slot Count Sweet Spot](insights/post_005/post_005_slot_count_sweet_spot.md) |
-| 006 | [Your Trailing Stop Is Probably Already Good Enough](insights/post_006/post_006_trailing_stop_already_good.md) |
-| 007 | [I Tried Dynamic Parameters. Static Won.](insights/post_007/post_007_dynamic_params_failed.md) |
-| 008 | [More Leverage or More Positions?](insights/post_008/post_008_leverage_vs_slots.md) |
-| 009 | [Monte Carlo Humility](insights/post_009/post_009_monte_carlo_humility.md) |
-| 010 | [The Exit You Never Optimize](insights/post_010/post_010_exit_mode_beats_tpsl.md) |
-| 011 | [Your IS PF Was 2.16. Your OOS PF Was 1.38.](insights/post_011/post_011_is_oos_divergence.md) |
-| 012 | [132 Configs Tested. Only 1 Was Profitable Every Single Year.](insights/post_012/post_012_yearly_consistency.md) |
-| 013 | [Kelly Said 154x. We Run 30x. Here's Why.](insights/post_013/post_013_kelly_leverage.md) |
-| 014 | [Backtest Said +$125. Live Delivered -$33. Same Signal, Same Bar.](insights/post_014/post_014_mfe_exit_gap.md) |
+| # | Title | Core Focus | Key Quantitative Finding |
+|---|---|---|---|
+| 001 | [Why Your 3-Year Crypto Backtest is Lying to You](insights/post_001/post_001_3yr_vs_6yr_crash_test.md) | Crash Resilience | 3yr winner MaxDD doubled from 6.7% to 13.2% in 6yr crash tests (COVID/Luna/FTX); 2-slot variant was most stable (+0.6pp). |
+| 002 | [Win Rate 70% vs R:R 2:1 — Which Actually Survives?](insights/post_002/post_002_wr_vs_rr.md) | Risk-Reward Ratio | High WR (68.5%) baseline had only 6pp safety margin over breakeven; Balanced R:R (1.16–1.22) kept 21pp margin and cross-regime stability. |
+| 003 | [The Long Bias That Stopped Working](insights/post_003/post_003_long_short_reversal.md) | Directional Edge | Long-side EV advantage eroded from +1.84pp (2020-21) to −0.24pp (2025-26), proving structural symmetry decay in crypto perps. |
+| 004 | [More Symbols, More Alpha?](insights/post_004/post_004_universe_expansion.md) | Universe Selection | Expanding universe from top 30 to 60+ symbols diluted Calmar ratio due to liquidity decay and spread expansion in tail assets. |
+| 005 | [The Slot Count Sweet Spot](insights/post_005/post_005_slot_count_sweet_spot.md) | Position Sizing | Calmar ratio peaks at 10 concurrent slots (Calmar 5.8, AnnRet 187%); 12+ slots spikes drawdown without Calmar gain. |
+| 006 | [Your Trailing Stop Is Probably Already Good Enough](insights/post_006/post_006_trailing_stop_already_good.md) | Exit Mechanics | Standard ATR trailing stop captured 98% of the theoretical profit of complex dynamic trailing logic without overfitting. |
+| 007 | [I Tried Dynamic Parameters. Static Won.](insights/post_007/post_007_dynamic_params_failed.md) | Parameter Robustness | Adaptive regime-switching lookbacks overfitted historical noise; fixed, static parameters yielded superior out-of-sample stability. |
+| 008 | [More Leverage or More Positions?](insights/post_008/post_008_leverage_vs_slots.md) | Risk Scaling | Increasing concurrent slots across diversified pairs improved risk-adjusted returns far more safely than increasing leverage per position. |
+| 009 | [Monte Carlo Humility](insights/post_009/post_009_monte_carlo_humility.md) | Drawdown Estimation | Bootstrap Monte Carlo severely underestimated tail correlation clustering during black swan liquidity cascades. |
+| 010 | [The Exit You Never Optimize](insights/post_010/post_010_exit_mode_beats_tpsl.md) | Exit Strategy | Signal-based structural exits consistently outperformed fixed percentage TP/SL targets across multiple regime shifts. |
+| 011 | [Your IS PF Was 2.16. Your OOS PF Was 1.38.](insights/post_011/post_011_is_oos_divergence.md) | Walk-Forward Realism | Realistic In-Sample to Out-of-Sample profit factor degradation showed a ~36% haircut is standard even under zero-lookahead backtesting. |
+| 012 | [132 Configs Tested. Only 1 Was Profitable Every Single Year.](insights/post_012/post_012_yearly_consistency.md) | Cross-Year Consistency | Across 132 parameter variations, exactly 1 configuration maintained positive net return in every individual calendar year from 2020 to 2026. |
+| 013 | [Kelly Said 154x. We Run 30x. Here's Why.](insights/post_013/post_013_kelly_leverage.md) | Position Sizing | Mathematical Kelly Criterion recommended 154x leverage; operational limits capped leverage at 30x to survive fat-tail slippage. |
+| 014 | [Backtest Said +$125. Live Delivered -$33. Same Signal, Same Bar.](insights/post_014/post_014_mfe_exit_gap.md) | Execution Slippage | Intrabar trailing stop simulation produced an optimistic +$125 fill while live bar-close execution resulted in -$33 ($158 gap/slot). |
 
 Each folder also has a `.py` script that regenerates its chart from the numbers in the write-up, and a `.txt` with the raw output those numbers came from.
 
