@@ -1,8 +1,6 @@
 # Crypto Quant Insights 📈
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/younghwan91/crypto-quant-insights?style=social)](https://github.com/younghwan91/crypto-quant-insights)
-[![GitHub forks](https://img.shields.io/github/forks/younghwan91/crypto-quant-insights?style=social)](https://github.com/younghwan91/crypto-quant-insights)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
 
 Short, chart-backed research notes from validating a live Binance USDT-M futures system — what held up out-of-sample, what looked good and quietly wasn't, and why. Each post is self-contained: the finding, the chart, and the script that generated it.
@@ -34,13 +32,11 @@ Each folder also has a `.py` script that regenerates its chart from the numbers 
 
 MIT — reuse the charts/scripts, just don't claim the strategy P&L as your own backtest.
 
-## ⭐ Star History & Support
+## Discussions & Issues
 
-[![Star History Chart](https://api.star-history.com/svg?repos=younghwan91/crypto-quant-insights&type=Date)](https://star-history.com/#younghwan91/crypto-quant-insights&Date)
-
-If you find these empirical crypto trading findings and charts useful, please **[⭐ Star this repository](https://github.com/younghwan91/crypto-quant-insights)**!
 - 🐛 Discussions & questions → [Issues](https://github.com/younghwan91/crypto-quant-insights/issues)
 - 📈 Updates → [Follow @younghwan91](https://github.com/younghwan91)
+
 
 ## Related projects — open-source quant stack
 
