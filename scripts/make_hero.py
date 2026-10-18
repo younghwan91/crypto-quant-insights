@@ -25,7 +25,7 @@ PICKS = [
     ("002", "Win Rate 70% vs R:R 2:1", "insights/post_002/post_002_wr_vs_rr.png"),
     ("011", "IS PF 2.16 vs OOS PF 1.38", "insights/post_011/post_011_is_oos_divergence.png"),
     ("013", "Kelly Said 154x. We Run 30x.", "insights/post_013/post_013_kelly_leverage.png"),
-    ("008", "More Leverage or More Positions?", "insights/post_008/post_008_leverage_vs_slots.png"),
+    ("009", "Monte Carlo Humility: 10,000 Paths", "insights/post_009/post_009_monte_carlo_humility.png"),
     ("010", "The Exit You Never Optimize", "insights/post_010/post_010_exit_mode_beats_tpsl.png"),
 ]
 
