@@ -3,6 +3,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.png">
+  <img alt="Six charts from the posts: 3-year vs 6-year crash test, win rate vs R:R, IS/OOS profit-factor gap, Kelly 154x vs 30x, leverage vs positions, exit-mode comparison" src="docs/images/hero-light.png" width="100%">
+</picture>
+
 Short, chart-backed research notes from validating a live Binance USDT-M futures system — what held up out-of-sample, what looked good and quietly wasn't, and why. Each post is self-contained: the finding, the chart, and the script that generated it.
 
 The strategy itself (signal generation, live parameters, P&L) stays private — see [binance-quant-engine](https://github.com/younghwan91/binance-quant-engine) for the public infra these findings were measured on. What's here is the *methodology and validation results*, not the alpha.
