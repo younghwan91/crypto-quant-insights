@@ -1,6 +1,6 @@
 # Crypto Quant Insights 📈
 
-Fourteen chart-backed lessons from validating a live Binance USDT-M futures system — what held up out-of-sample, what looked good and quietly wasn't, and why. The strategy stays private; the findings don't.
+Fourteen chart-backed lessons from validating a Binance USDT-M futures trading system — what held up out-of-sample, what looked good and quietly wasn't, and why.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
@@ -14,7 +14,7 @@ Fourteen chart-backed lessons from validating a live Binance USDT-M futures syst
 - **IS profit factor 2.16, OOS 1.38.** Seven variants optimized on 2020–22 and frozen for 2023–25: every one dropped 36–55%, none passed the 0.85 OOS/IS bar. → [#011](insights/post_011/post_011_is_oos_divergence.md)
 - **Backtest said +$125, live delivered −$33, same signal, same bar.** Intrabar trail fills vs bar-close execution — a modeling assumption, not slippage. → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
-Each post is self-contained: the finding, the chart, the script that drew it, and a LinkedIn-length version of the post. Signal logic and P&L are not here — the public infra these were measured on is [quantbox](https://github.com/younghwan91/quantbox). What's here is the *methodology and validation results*, not the alpha.
+Each post is self-contained: the finding, the chart, the script that drew it, and a LinkedIn-length version of the post. The system these were measured on is [quantbox](https://github.com/younghwan91/quantbox) (open source). This repo holds the *methodology and validation write-ups* — not a track record, and not a claim that the strategy will keep working.
 
 ## Posts
 
