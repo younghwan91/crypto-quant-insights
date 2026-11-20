@@ -14,7 +14,7 @@ Fourteen chart-backed lessons from validating a live Binance USDT-M futures syst
 - **IS profit factor 2.16, OOS 1.38.** Seven variants optimized on 2020–22 and frozen for 2023–25: every one dropped 36–55%, none passed the 0.85 OOS/IS bar. → [#011](insights/post_011/post_011_is_oos_divergence.md)
 - **Backtest said +$125, live delivered −$33, same signal, same bar.** Intrabar trail fills vs bar-close execution — a modeling assumption, not slippage. → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
-Each post is self-contained: the finding, the chart, the script that drew it, and a LinkedIn-length version of the post. Signal logic and P&L are not here — the public infra these were measured on is [binance-quant-engine](https://github.com/younghwan91/binance-quant-engine). What's here is the *methodology and validation results*, not the alpha.
+Each post is self-contained: the finding, the chart, the script that drew it, and a LinkedIn-length version of the post. Signal logic and P&L are not here — the public infra these were measured on is [quantbox](https://github.com/younghwan91/quantbox). What's here is the *methodology and validation results*, not the alpha.
 
 ## Posts
 
@@ -63,7 +63,7 @@ Part of an open-source stack spanning Korean equities, US equities and crypto. E
 | 🇺🇸 US equities | **[portfolio-research](https://github.com/younghwan91/portfolio-research)** | US equity factor engine — walk-forward gated by Deflated Sharpe and PBO on point-in-time, survivorship-bias-free data; tactical ETF allocation goes through the same gate |
 | 🇺🇸 US equities | **[macro-sector-agent](https://github.com/younghwan91/macro-sector-agent)** | Top-down US sector-cycle research — asks which industry has been forgotten, not what to buy; the machine excludes, never picks |
 | 🇺🇸 US equities | **[automated-stock-trading-systems](https://github.com/younghwan91/automated-stock-trading-systems)** | Backtester for Bensdorp's seven non-correlated trading systems (educational reimplementation) |
-| ₿ Crypto | **[binance-quant-engine](https://github.com/younghwan91/binance-quant-engine)** | Crypto futures backtest & execution engine — zero lookahead, backtest↔live parity |
+| ₿ Crypto | **[quantbox](https://github.com/younghwan91/quantbox)** | Binance USDT-M futures pair-trading backtest & live system — no look-ahead, backtest/live parity |
 
 ## Author
 
