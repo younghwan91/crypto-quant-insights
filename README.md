@@ -1,6 +1,11 @@
-# Crypto Quant Insights 📈
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/brand/wordmark-dark.svg">
+  <img alt="Crypto Quant Insights" src="docs/images/brand/wordmark-light.svg" height="56">
+</picture>
 
-Fourteen chart-backed lessons from validating a Binance USDT-M futures trading system — what held up out-of-sample, what looked good and quietly wasn't, and why.
+**English** | [한국어](README.ko.md)
+
+**Fourteen chart-backed lessons from validating a Binance USDT-M futures trading system — what held up out-of-sample, what looked good and quietly wasn't, and why.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
