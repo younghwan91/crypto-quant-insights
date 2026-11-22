@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" fill="none">
+  <defs>
+    <linearGradient id="cqi-l-bg" x1="0" y1="0" x2="1200" y2="280" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="65%" stop-color="#F1F5F9"/>
+      <stop offset="100%" stop-color="#ECFDF5"/>
+    </linearGradient>
+    <linearGradient id="cqi-l-mark" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1F2937"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="cqi-l-em" x1="780" y1="210" x2="1080" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <radialGradient id="cqi-l-glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#10B981" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Card Surface -->
+  <rect x="1" y="1" width="1198" height="278" rx="20" fill="url(#cqi-l-bg)" stroke="#CBD5E1" stroke-width="1.5"/>
+  <circle cx="945" cy="140" r="145" fill="url(#cqi-l-glow)"/>
+
+  <!-- Left: Brand Mark -->
+  <g transform="translate(52, 54)">
+    <rect width="64" height="64" rx="14" fill="url(#cqi-l-mark)"/>
+    <rect x="1" y="1" width="62" height="62" rx="13" stroke="#10B981" stroke-opacity="0.35" stroke-width="1.5"/>
+    <polygon points="32,12 52,32 32,52 12,32" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1.6" fill="#10B981" fill-opacity="0.06"/>
+    <polygon points="32,20 44,32 32,44 20,32" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="1.2"/>
+    <path d="M16 40L25 31L32 36L46 21" stroke="#34D399" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="25" cy="31" r="2.6" fill="#38BDF8"/>
+    <circle cx="32" cy="36" r="2.6" fill="#F8FAFC"/>
+    <circle cx="46" cy="21" r="3" fill="#34D399"/>
+  </g>
+
+  <!-- Left: Typography -->
+  <text x="136" y="98" fill="#0F172A" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="38" font-weight="800" letter-spacing="-0.025em">Crypto Quant Insights</text>
+  <text x="52" y="156" fill="#475569" font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="18.5" font-weight="500">14 chart-backed empirical lessons from validating a live futures system</text>
+
+  <!-- Left: Tech Pill -->
+  <rect x="52" y="188" width="356" height="34" rx="17" fill="#FFFFFF" stroke="#A7F3D0" stroke-width="1.2"/>
+  <circle cx="72" cy="205" r="4" fill="#10B981"/>
+  <text x="86" y="210" fill="#0F172A" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="13" font-weight="600">OOS Validation  •  Monte Carlo  •  Kelly</text>
+
+  <!-- Right: Empirical Validation Prism Artwork -->
+  <!-- Crosshairs -->
+  <g stroke="#94A3B8" stroke-opacity="0.28" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="785" y1="140" x2="1105" y2="140"/>
+    <line x1="945" y1="26" x2="945" y2="254"/>
+  </g>
+
+  <!-- Nested Validation Prisms -->
+  <polygon points="945,32 1053,140 945,248 837,140" fill="#10B981" fill-opacity="0.06" stroke="#0284C7" stroke-opacity="0.45" stroke-width="2"/>
+  <polygon points="945,62 1023,140 945,218 867,140" fill="#38BDF8" fill-opacity="0.05" stroke="#0EA5E9" stroke-opacity="0.4" stroke-width="1.5"/>
+  <polygon points="945,92 993,140 945,188 897,140" stroke="#10B981" stroke-opacity="0.4" stroke-width="1.2"/>
+
+  <!-- Prism Corner Anchors -->
+  <circle cx="945" cy="32" r="3.5" fill="#0284C7"/>
+  <circle cx="1053" cy="140" r="3.5" fill="#0284C7"/>
+  <circle cx="945" cy="248" r="3.5" fill="#0284C7"/>
+  <circle cx="837" cy="140" r="3.5" fill="#0284C7"/>
+
+  <!-- Empirical Signal & Validation Path -->
+  <path d="M775 186 L837 148 L892 162 L945 112 L996 132 L1068 72 L1116 88" stroke="#94A3B8" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M775 196 L848 134 L904 156 L945 118 L998 124 L1062 66" stroke="url(#cqi-l-em)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Validation Nodes -->
+  <circle cx="848" cy="134" r="5.5" fill="#FFFFFF" stroke="#0284C7" stroke-width="2.5"/>
+  <circle cx="904" cy="156" r="5" fill="#FFFFFF" stroke="#64748B" stroke-width="2.5"/>
+  <circle cx="945" cy="118" r="6" fill="#FFFFFF" stroke="#10B981" stroke-width="2.8"/>
+  <circle cx="1062" cy="66" r="7" fill="#10B981" stroke="#FFFFFF" stroke-width="2.5"/>
+</svg>
