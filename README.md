@@ -1,25 +1,47 @@
+<div align="center">
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/brand/wordmark-dark.svg">
   <img alt="crypto-quant-insights" src="docs/images/brand/wordmark-light.svg" height="52">
 </picture>
 
-**English** | [한국어](README.ko.md)
+# crypto-quant-insights
 
-**Fourteen chart-backed lessons from validating a Binance USDT-M futures trading system — what held up out-of-sample, what looked good and quietly wasn't, and why.**
+**Fourteen chart-backed lessons from validating a Binance USDT-M futures system — what held up out-of-sample, what looked good and quietly wasn't, and why.**
+
+Methodology and validation write-ups from [quantbox](https://github.com/younghwan91/quantbox) — not a track record, and not investment advice.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
+
+[Quick Start](#quick-start) · [Key Findings](#key-findings) · [Posts](#posts) · [Caveats](#caveats) · [한국어](README.ko.md)
+
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.png">
   <img alt="Six charts from the posts: 3-year vs 6-year crash test, win rate vs R:R, IS/OOS profit-factor gap, Kelly 154x vs 30x, Monte Carlo 10,000 paths, exit-mode comparison" src="docs/images/hero-light.png" width="100%">
 </picture>
 
-- **Kelly said 154x. We run 30x.** Per-trade Kelly ignores that ten open slots at half-Kelly would put 770% of equity at risk. → [#013](insights/post_013/post_013_kelly_leverage.md)
-- **IS profit factor 2.16, OOS 1.38.** Seven variants optimized on 2020–22 and frozen for 2023–25: every one dropped 36–55%, none passed the 0.85 OOS/IS bar. → [#011](insights/post_011/post_011_is_oos_divergence.md)
-- **Backtest said +$125, live delivered −$33, same signal, same bar.** Intrabar trail fills vs bar-close execution — a modeling assumption, not slippage. → [#014](insights/post_014/post_014_mfe_exit_gap.md)
+<p align="center"><sub>Six charts from the 14 validation posts: crash stress tests, win rate vs R:R, IS/OOS divergence, Kelly leverage, Monte Carlo drawdowns, and exit execution gaps.</sub></p>
 
-Each post is self-contained: the finding, the chart, the script that drew it, and a LinkedIn-length version of the post. The system these were measured on is [quantbox](https://github.com/younghwan91/quantbox) (open source). This repo holds the *methodology and validation write-ups* — not a track record, and not a claim that the strategy will keep working.
+## Quick Start
+
+Redraw any chart locally from the published numbers using only `matplotlib` and `numpy`:
+
+```bash
+git clone https://github.com/younghwan91/crypto-quant-insights.git
+cd crypto-quant-insights
+uv run --with matplotlib --with numpy python insights/post_011/post_011_is_oos_divergence.py
+```
+
+Each `insights/post_XXX/` folder contains the `.md` write-up, `.png` chart, `.txt` LinkedIn summary, and `.py` reproduction script.
+
+## Key Findings
+
+- **Kelly said 154x; we run 30x:** Per-trade Kelly ignores that ten open slots at half-Kelly would put 770% of equity at risk. → [#013](insights/post_013/post_013_kelly_leverage.md)
+- **IS profit factor 2.16, OOS 1.38:** Seven variants optimized on 2020–22 and frozen for 2023–25 all dropped 36–55%, and none passed the 0.85 OOS/IS bar. → [#011](insights/post_011/post_011_is_oos_divergence.md)
+- **Backtest said +$125, live delivered −$33:** Same signal, same bar — intrabar trail fills vs bar-close execution is a modeling assumption, not slippage. → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
 ## Posts
 
@@ -40,20 +62,17 @@ Each post is self-contained: the finding, the chart, the script that drew it, an
 | <a href="insights/post_013/post_013_kelly_leverage.md"><img src="insights/post_013/post_013_kelly_leverage.png" width="160" alt="post 013 chart"></a> | **013 · [Kelly Said 154x. We Run 30x. Here's Why.](insights/post_013/post_013_kelly_leverage.md)**<br>Position sizing | WR 25.9% → 62.9% multiplied full Kelly ~5× (30.7x → 154x); leverage stayed at 30x because Kelly is per-trade, not per-portfolio. |
 | <a href="insights/post_014/post_014_mfe_exit_gap.md"><img src="insights/post_014/post_014_mfe_exit_gap.png" width="160" alt="post 014 chart"></a> | **014 · [Backtest Said +$125. Live Delivered -$33. Same Signal, Same Bar.](insights/post_014/post_014_mfe_exit_gap.md)**<br>Execution model | Intrabar vs bar-close trail exits: 31bp per trade on average, PF 1.99 → 1.41 on the 14.7% of trades that hit the trail. |
 
-**How to read / reproduce.** Open a post's `.md`; the `.png` next to it is the chart, the `.txt` is the LinkedIn-length version of the post, and the `.py` redraws the chart from the numbers in the write-up with only matplotlib and numpy: `uv run --with matplotlib --with numpy python insights/post_011/post_011_is_oos_divergence.py`.
+## Caveats
+
+- **Not a live track record:** These write-ups document validation experiments on historical and paper/live-comparison data, not audited fund performance.
+- **Not investment advice:** Nothing here claims that any parameter set or signal will continue working in future market regimes.
+- **System code lives elsewhere:** The underlying engine is [quantbox](https://github.com/younghwan91/quantbox); this repository holds the findings and chart scripts.
+
+## Community & Author
+
+- **Questions & discussion:** [GitHub Issues](https://github.com/younghwan91/crypto-quant-insights/issues)
+- **Author:** Younghwan Chae · [GitHub @younghwan91](https://github.com/younghwan91) · [LinkedIn](https://www.linkedin.com/in/younghwan-chae/)
 
 ## License
 
-MIT — reuse the charts/scripts, just don't claim the strategy P&L as your own backtest.
-
-## Discussions & Issues
-
-- 🐛 Discussions & questions → [Issues](https://github.com/younghwan91/crypto-quant-insights/issues)
-- 📈 Updates → [Follow @younghwan91](https://github.com/younghwan91)
-
-
-## Author
-
-**Younghwan Chae** · [GitHub @younghwan91](https://github.com/younghwan91) · [LinkedIn](https://www.linkedin.com/in/younghwan-chae/)
-
-See the full open-source quant stack on my [profile](https://github.com/younghwan91).
+[MIT](LICENSE) — reuse the charts and scripts; do not claim the strategy P&L as your own backtest.
