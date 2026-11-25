@@ -14,16 +14,30 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
 
-[빠른 시작](#빠른-시작) · [핵심 발견](#핵심-발견) · [포스트 목록](#포스트-목록) · [주의사항](#주의사항) · [English](README.md)
+[14가지 교훈](#14가지-교훈) · [빠른 시작](#빠른-시작) · [핵심 발견](#핵심-발견) · [포스트 목록](#포스트-목록) · [주의사항](#주의사항) · [English](README.md)
 
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.png">
-  <img alt="Six charts from the posts: 3-year vs 6-year crash test, win rate vs R:R, IS/OOS profit-factor gap, Kelly 154x vs 30x, Monte Carlo 10,000 paths, exit-mode comparison" src="docs/images/hero-light.png" width="100%">
-</picture>
+<p align="center"><a href="insights/post_011/post_011_is_oos_divergence.md"><img alt="IS 수익 팩터 2.16~3.51 대 OOS 1.38~1.58, 7개 변형" src="insights/post_011/post_011_is_oos_divergence.png" width="100%"></a></p>
 
-<p align="center"><sub>14편의 검증 포스트에서 뽑은 6가지 차트: 폭락 스트레스 테스트, 승률 대 손익비, IS/OOS 괴리, 켈리 레버리지, 몬테카를로 낙폭 분포, 청산 체결 모델 비교.</sub></p>
+<p align="center"><sub>가장 강한 결과: IS에서 최적화한 7개 변형 모두 OOS에서 수익 팩터의 65% 미만만 유지했습니다 (포스트 011).</sub></p>
+
+## 14가지 교훈
+
+- **01** · 3년 백테스트는 폭락을 숨겼습니다: 코로나·루나·FTX 포함 시 MaxDD 6.7% → 13.2% → [#001](insights/post_001/post_001_3yr_vs_6yr_crash_test.md)
+- **02** · 균형 잡힌 손익비는 손익분기 대비 21–22pp 마진을 유지했고, 승률 68.5%는 6pp뿐이었습니다 → [#002](insights/post_002/post_002_wr_vs_rr.md)
+- **03** · 롱-숏 우위가 매년 줄어 음수로 역전됐습니다 (+1.84pp → −0.24pp) → [#003](insights/post_003/post_003_long_short_reversal.md)
+- **04** · 종목 20 → 50개로 Sharpe 상승, MaxDD 유지; 20 → 30개 구간이 대부분 → [#004](insights/post_004/post_004_universe_expansion.md)
+- **05** · Calmar는 동시 슬롯 10개에서 정점이며, 더 늘리면 낙폭만 커집니다 → [#005](insights/post_005/post_005_slot_count_sweet_spot.md)
+- **06** · 트레일링 스탑 24개 변형이 거의 차이를 못 냈습니다; 이미 충분했습니다 → [#006](insights/post_006/post_006_trailing_stop_already_good.md)
+- **07** · 레짐 적응형 파라미터는 거래 28% 감소, Calmar 5.8 → 3.1; 정적 설정이 이겼습니다 → [#007](insights/post_007/post_007_dynamic_params_failed.md)
+- **08** · 5슬롯×1x vs 1슬롯×5x: 수익은 비슷, MaxDD 72.9% vs 99.8% → [#008](insights/post_008/post_008_leverage_vs_slots.md)
+- **09** · 부트스트랩 1만 경로: 99.1% 수익이면서 MaxDD 중앙값 73.6% → [#009](insights/post_009/post_009_monte_carlo_humility.md)
+- **10** · 부분청산+트레일은 25칸 모두 손익비 ≥ 1, 고정 TP/SL은 25칸 중 10칸 → [#010](insights/post_010/post_010_exit_mode_beats_tpsl.md)
+- **11** · IS PF 2.16이 OOS 1.38로; 7개 변형 중 0개가 OOS/IS 0.85 통과 → [#011](insights/post_011/post_011_is_oos_divergence.md)
+- **12** · 132개 설정 중 2020–2025 매년 수익은 1개뿐 → [#012](insights/post_012/post_012_yearly_consistency.md)
+- **13** · 켈리는 154x를 말했지만 30x로 운용: 켈리는 거래 단위이지 포트폴리오 단위가 아님 → [#013](insights/post_013/post_013_kelly_leverage.md)
+- **14** · 백테스트 +$125, 실거래 −$33: 같은 신호, 봉 중간 vs 봉 종가 체결 차이 → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
 ## 빠른 시작
 
@@ -44,6 +58,14 @@ uv run --with matplotlib --with numpy python insights/post_011/post_011_is_oos_d
 - **백테스트는 +$125, 실전은 −$33:** 같은 시그널, 같은 봉에서도 장중 트레일링 체결과 종가 기준 실행이 갈립니다. 단순 슬리피지가 아닌 모델링 가정의 문제입니다. → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
 ## 포스트 목록
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.png">
+  <img alt="Six charts from the posts: 3-year vs 6-year crash test, win rate vs R:R, IS/OOS profit-factor gap, Kelly 154x vs 30x, Monte Carlo 10,000 paths, exit-mode comparison" src="docs/images/hero-light.png" width="100%">
+</picture>
+
+<p align="center"><sub>14편의 검증 포스트에서 뽑은 6가지 차트: 폭락 스트레스 테스트, 승률 대 손익비, IS/OOS 괴리, 켈리 레버리지, 몬테카를로 낙폭 분포, 청산 체결 모델 비교.</sub></p>
+
 
 | | 포스트 | 핵심 발견 |
 |---|---|---|
@@ -67,6 +89,13 @@ uv run --with matplotlib --with numpy python insights/post_011/post_011_is_oos_d
 - **실전 운용 실적이 아닙니다:** 이 저장소는 과거 데이터와 모의·실전 비교 실험의 검증 과정을 기록한 것이며, 감사된 펀드 수익률이 아닙니다.
 - **투자 조언이 아닙니다:** 어떤 파라미터 설정이나 시그널도 향후 시장 국면에서 계속 작동한다고 주장하지 않습니다.
 - **시스템 코드는 별도 저장소에 있습니다:** 기반 엔진은 [quantbox](https://github.com/younghwan91/quantbox)이며, 이 저장소는 분석 결과와 차트 재현 스크립트를 담고 있습니다.
+
+## 같은 저자의 도구
+
+- [quantbox](https://github.com/younghwan91/quantbox): 이 결과를 측정한 오픈소스 엔진입니다.
+- [crypto-pair-trading](https://github.com/younghwan91/crypto-pair-trading): 관련 크립토 전략 연구입니다.
+- [kiwoom-client](https://github.com/younghwan91/kiwoom-client): 키움증권 API 파이썬 클라이언트입니다.
+- [fin-checkup](https://github.com/younghwan91/fin-checkup): DART 공시로 계산한 상장사 재무 신호등입니다.
 
 ## 커뮤니티 및 작성자
 
