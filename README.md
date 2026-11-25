@@ -14,16 +14,30 @@ Methodology and validation write-ups from [quantbox](https://github.com/younghwa
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-younghwan--chae-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/younghwan-chae/)
 
-[Quick Start](#quick-start) · [Key Findings](#key-findings) · [Posts](#posts) · [Caveats](#caveats) · [한국어](README.ko.md)
+[14 lessons](#the-14-lessons) · [Quick Start](#quick-start) · [Key Findings](#key-findings) · [Posts](#posts) · [Caveats](#caveats) · [한국어](README.ko.md)
 
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.png">
-  <img alt="Six charts from the posts: 3-year vs 6-year crash test, win rate vs R:R, IS/OOS profit-factor gap, Kelly 154x vs 30x, Monte Carlo 10,000 paths, exit-mode comparison" src="docs/images/hero-light.png" width="100%">
-</picture>
+<p align="center"><a href="insights/post_011/post_011_is_oos_divergence.md"><img alt="In-sample profit factor 2.16 to 3.51 versus out-of-sample 1.38 to 1.58 across seven variants" src="insights/post_011/post_011_is_oos_divergence.png" width="100%"></a></p>
 
-<p align="center"><sub>Six charts from the 14 validation posts: crash stress tests, win rate vs R:R, IS/OOS divergence, Kelly leverage, Monte Carlo drawdowns, and exit execution gaps.</sub></p>
+<p align="center"><sub>Strongest result: 7 variants optimized in-sample all kept less than 65% of their profit factor out-of-sample (post 011).</sub></p>
+
+## The 14 lessons
+
+- **01** · A 3-year backtest hid the crashes: MaxDD 6.7% -> 13.2% once COVID, Luna and FTX were in → [#001](insights/post_001/post_001_3yr_vs_6yr_crash_test.md)
+- **02** · Balanced R:R kept a 21-22pp breakeven margin; a 68.5% win rate sat only 6pp above it → [#002](insights/post_002/post_002_wr_vs_rr.md)
+- **03** · The long-minus-short edge shrank every year and flipped negative (+1.84pp -> -0.24pp) → [#003](insights/post_003/post_003_long_short_reversal.md)
+- **04** · 20 -> 50 symbols lifted Sharpe with flat MaxDD; the 20 -> 30 step gave most of it → [#004](insights/post_004/post_004_universe_expansion.md)
+- **05** · Calmar peaks at 10 concurrent slots; more only adds drawdown → [#005](insights/post_005/post_005_slot_count_sweet_spot.md)
+- **06** · 24 trailing-stop variants changed almost nothing; the stop was already good enough → [#006](insights/post_006/post_006_trailing_stop_already_good.md)
+- **07** · Regime-adaptive parameters cut trades 28% and Calmar 5.8 -> 3.1; static won → [#007](insights/post_007/post_007_dynamic_params_failed.md)
+- **08** · 5 slots x 1x vs 1 slot x 5x: similar returns, MaxDD 72.9% vs 99.8% → [#008](insights/post_008/post_008_leverage_vs_slots.md)
+- **09** · 10,000 bootstrap paths: 99.1% profitable and a 73.6% median MaxDD → [#009](insights/post_009/post_009_monte_carlo_humility.md)
+- **10** · Partial + trail exits reach R:R >= 1 in 25 of 25 grid cells vs 10 of 25 for fixed TP/SL → [#010](insights/post_010/post_010_exit_mode_beats_tpsl.md)
+- **11** · IS PF 2.16 became OOS 1.38; 0 of 7 variants passed the 0.85 OOS/IS bar → [#011](insights/post_011/post_011_is_oos_divergence.md)
+- **12** · 132 configs tested, 1 profitable in every year 2020-2025 → [#012](insights/post_012/post_012_yearly_consistency.md)
+- **13** · Kelly said 154x; we run 30x because Kelly is per-trade, not per-portfolio → [#013](insights/post_013/post_013_kelly_leverage.md)
+- **14** · Backtest +$125, live -$33: intrabar vs bar-close trail fills, same signal → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
 ## Quick Start
 
@@ -44,6 +58,14 @@ Each `insights/post_XXX/` folder contains the `.md` write-up, `.png` chart, `.tx
 - **Backtest said +$125, live delivered −$33:** Same signal, same bar — intrabar trail fills vs bar-close execution is a modeling assumption, not slippage. → [#014](insights/post_014/post_014_mfe_exit_gap.md)
 
 ## Posts
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/images/hero-dark.png">
+  <img alt="Six charts from the posts: 3-year vs 6-year crash test, win rate vs R:R, IS/OOS profit-factor gap, Kelly 154x vs 30x, Monte Carlo 10,000 paths, exit-mode comparison" src="docs/images/hero-light.png" width="100%">
+</picture>
+
+<p align="center"><sub>Six charts from the 14 validation posts: crash stress tests, win rate vs R:R, IS/OOS divergence, Kelly leverage, Monte Carlo drawdowns, and exit execution gaps.</sub></p>
+
 
 | | Post | Finding |
 |---|---|---|
@@ -67,6 +89,13 @@ Each `insights/post_XXX/` folder contains the `.md` write-up, `.png` chart, `.tx
 - **Not a live track record:** These write-ups document validation experiments on historical and paper/live-comparison data, not audited fund performance.
 - **Not investment advice:** Nothing here claims that any parameter set or signal will continue working in future market regimes.
 - **System code lives elsewhere:** The underlying engine is [quantbox](https://github.com/younghwan91/quantbox); this repository holds the findings and chart scripts.
+
+## More from the same author
+
+- [quantbox](https://github.com/younghwan91/quantbox): the open-source engine these results were measured on.
+- [crypto-pair-trading](https://github.com/younghwan91/crypto-pair-trading): a related crypto strategy study.
+- [kiwoom-client](https://github.com/younghwan91/kiwoom-client): Python client for the Kiwoom Securities API (Korean equities).
+- [fin-checkup](https://github.com/younghwan91/fin-checkup): financial-ratio traffic lights for Korean listed companies from DART filings.
 
 ## Community & Author
 

@@ -1,0 +1,27 @@
+name: Charts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install matplotlib numpy
+      - name: Re-run every chart script that needs only matplotlib and numpy
+        env:
+          MPLBACKEND: Agg
+        run: |
+          for f in insights/post_*/*.py; do
+            if grep -q quantbox "$f"; then echo "skip $f (needs quantbox)"; continue; fi
+            echo "run $f"; python "$f"
+          done
